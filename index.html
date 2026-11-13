@@ -1,0 +1,178 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>بُنّ وسُكّر</title><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+/* Layout: RTL editorial — oversized kufi headline beside a steaming cup, then menu tabs, brew ratios, origins ribbon, visit block */
+:root{
+  --bg:#eef2ee;--paper:#ffffff;--ink:#14261f;--muted:#5a6b63;--line:#d3ddd7;
+  --green:#1d4a3a;--brass:#b08a3e;--brass-soft:#efe4c9;--steam:#14261f;
+  --display:"Reem Kufi",system-ui,sans-serif;--body:"Tajawal",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1714;--paper:#14211c;--ink:#e9efe9;--muted:#9fb1a8;--line:#24352e;
+  --green:#7fbf9f;--brass:#d6b066;--brass-soft:#2c2616;--steam:#e9efe9;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1714;--paper:#14211c;--ink:#e9efe9;--muted:#9fb1a8;--line:#24352e;
+  --green:#7fbf9f;--brass:#d6b066;--brass-soft:#2c2616;--steam:#e9efe9;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;direction:rtl;overflow-x:hidden}
+.in{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.15;text-wrap:balance}
+a{color:inherit}
+nav .in{display:flex;justify-content:space-between;align-items:center;padding-block:20px;gap:16px}
+.logo{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--green)}
+.logo b{color:var(--brass)}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);position:relative}
+nav ul a::after{content:"";position:absolute;inset:auto 0 -4px 0;height:2px;background:var(--brass);transform:scaleX(0);transform-origin:right;transition:transform .3s ease}
+nav ul a:hover::after{transform:scaleX(1)}
+@media (max-width:640px){nav ul{display:none}}
+
+.hero .in{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding-block:40px 72px}
+.eyebrow{font-size:.85rem;letter-spacing:.06em;color:var(--brass);font-weight:700}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:700;color:var(--green)}
+.hero h1 span{display:block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 span:nth-child(2){animation-delay:.12s;color:var(--ink)}
+.hero p{max-width:34ch;color:var(--muted);font-size:1.15rem;margin:20px 0 28px;animation:rise .9s .25s cubic-bezier(.2,.8,.2,1) both}
+.cta{display:flex;gap:12px;flex-wrap:wrap;animation:rise .9s .35s cubic-bezier(.2,.8,.2,1) both}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:700;border:1.5px solid var(--green);transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn.fill{background:var(--green);color:var(--bg)}
+.btn:hover{transform:translateY(-2px)}
+.btn:not(.fill):hover{background:var(--green);color:var(--bg)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+.cupwrap{position:relative;aspect-ratio:1;max-width:100%;display:grid;place-items:center}
+.ring{position:absolute;inset:6%;border-radius:50%;border:1.5px dashed var(--brass);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cupwrap svg{width:62%;height:auto;overflow:visible}
+.steam path{fill:none;stroke:var(--steam);stroke-width:3;stroke-linecap:round;opacity:.0;animation:steam 3.2s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.8s}.steam path:nth-child(3){animation-delay:1.6s}
+@keyframes steam{0%{opacity:0;transform:translateY(14px)}35%{opacity:.55}100%{opacity:0;transform:translateY(-26px)}}
+
+.ribbon{background:var(--green);color:var(--bg);overflow:hidden;padding-block:14px;white-space:nowrap}
+.track{display:inline-flex;gap:48px;animation:marquee 30s linear infinite;font-family:var(--display);font-size:1.25rem}
+.track span{display:inline-flex;gap:12px;align-items:center}
+.track i{font-style:normal;color:var(--brass)}
+@keyframes marquee{to{transform:translateX(50%)}}
+
+section.block{padding-block:88px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.head h2{font-size:clamp(2rem,4.5vw,3.2rem)}
+.head p{color:var(--muted);max-width:42ch;margin:0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.tab{font:inherit;font-weight:700;padding:9px 20px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s ease}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tab:focus-visible,.btn:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:56px}
+.item{display:flex;align-items:baseline;gap:12px;padding-block:18px;border-bottom:1px solid var(--line);animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+.item h3{font-size:1.25rem;font-weight:500}
+.item small{display:block;color:var(--muted);font-size:.9rem}
+.item .dots{flex:1;border-bottom:1.5px dotted var(--line);transform:translateY(-6px)}
+.item .price{font-family:var(--display);color:var(--brass);font-size:1.2rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media (max-width:760px){.menu{grid-template-columns:1fr}.hero .in{grid-template-columns:1fr}.cupwrap{max-width:360px;margin:0 auto;width:100%}}
+
+.brew{background:var(--paper);border-block:1px solid var(--line)}
+.methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.m{padding:28px;border-radius:20px;background:var(--bg);display:flex;flex-direction:column;gap:14px;transition:transform .3s ease}
+.m:hover{transform:translateY(-6px) rotate(-.6deg)}
+.m h3{font-size:1.5rem;color:var(--green)}
+.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.95rem}
+.spec dt{color:var(--muted)}.spec dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums}
+.bar{height:6px;border-radius:6px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--brass);border-radius:6px;transform-origin:right;animation:fill 1.6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fill{from{transform:scaleX(0)}}
+
+.visit .in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.visit h2{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--green)}
+.hours{display:grid;gap:0}
+.hours div{display:flex;justify-content:space-between;padding-block:14px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.hours div.now{color:var(--brass);font-weight:700}
+@media (max-width:760px){.visit .in{grid-template-columns:1fr}}
+footer{padding-block:36px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+footer .in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@supports (animation-timeline:view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<nav><div class="in">
+  <div class="logo">بُنّ <b>و</b>سُكّر</div>
+  <ul><li><a href="#menu">المنيو</a></li><li><a href="#brew">طرق التحضير</a></li><li><a href="#visit">زورنا</a></li></ul>
+</div></nav>
+
+<header class="hero"><div class="in">
+  <div>
+    <div class="eyebrow">قهوة مختصة · الزمالك</div>
+    <h1><span>فنجان</span><span>يستاهل الصحيان.</span></h1>
+    <p>بنحمّص البن بإيدينا كل أسبوع، وبنحضّره بالطريقة اللي تطلّع أحلى ما فيه. اقعد، اطلب، وسيب الباقي علينا.</p>
+    <div class="cta"><a class="btn fill" href="#menu">شوف المنيو ←</a><a class="btn" href="#visit">مواعيدنا</a></div>
+  </div>
+  <div class="cupwrap" aria-hidden="true">
+    <div class="ring"></div>
+    <svg viewBox="0 0 200 200">
+      <g class="steam"><path d="M80 70 q-10 -15 0 -30 t0 -30"/><path d="M100 70 q-10 -15 0 -30 t0 -30"/><path d="M120 70 q-10 -15 0 -30 t0 -30"/></g>
+      <ellipse cx="100" cy="168" rx="78" ry="12" fill="var(--brass-soft)"/>
+      <path d="M44 84 h112 l-10 66 q-4 18 -22 18 h-48 q-18 0 -22 -18z" fill="var(--green)"/>
+      <path d="M156 98 q28 0 26 24 q-2 22 -32 22" fill="none" stroke="var(--green)" stroke-width="10"/>
+      <ellipse cx="100" cy="84" rx="56" ry="9" fill="var(--brass)"/>
+    </svg>
+  </div>
+</div></header>
+
+<div class="ribbon" aria-label="أصول البن">
+  <div class="track" id="track"></div>
+</div>
+
+<section class="block" id="menu"><div class="in">
+  <div class="head reveal"><h2>المنيو</h2><p>الأسعار بالجنيه المصري. كل المشروبات الساخنة ممكن تتعمل بلبن الشوفان.</p></div>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="menu" id="menuList" role="tabpanel"></div>
+</div></section>
+
+<section class="block brew" id="brew"><div class="in">
+  <div class="head reveal"><h2>بنحضّرها إزاي</h2><p>كل طريقة ليها نسبة ودرجة حرارة. دي الأرقام اللي شغالين بيها فعلاً.</p></div>
+  <div class="methods">
+    <div class="m reveal"><h3>V60</h3><dl class="spec"><dt>النسبة</dt><dd>1 : 16</dd><dt>الحرارة</dt><dd>93°م</dd><dt>الطحنة</dt><dd>متوسطة ناعمة</dd><dt>الوقت</dt><dd>3:00 دقايق</dd></dl><div class="bar"><i style="width:75%"></i></div></div>
+    <div class="m reveal"><h3>إسبريسو</h3><dl class="spec"><dt>النسبة</dt><dd>1 : 2</dd><dt>الحرارة</dt><dd>94°م</dd><dt>الطحنة</dt><dd>ناعمة جداً</dd><dt>الوقت</dt><dd>28 ثانية</dd></dl><div class="bar"><i style="width:40%"></i></div></div>
+    <div class="m reveal"><h3>كولد برو</h3><dl class="spec"><dt>النسبة</dt><dd>1 : 8</dd><dt>الحرارة</dt><dd>مية ساقعة</dd><dt>الطحنة</dt><dd>خشنة</dd><dt>الوقت</dt><dd>18 ساعة</dd></dl><div class="bar"><i style="width:100%"></i></div></div>
+    <div class="m reveal"><h3>تركي على الرملة</h3><dl class="spec"><dt>النسبة</dt><dd>1 : 10</dd><dt>الحرارة</dt><dd>قبل الغليان</dd><dt>الطحنة</dt><dd>بودرة</dd><dt>الوقت</dt><dd>2:30 دقيقة</dd></dl><div class="bar"><i style="width:60%"></i></div></div>
+  </div>
+</div></section>
+
+<section class="block visit" id="visit"><div class="in">
+  <div class="reveal">
+    <h2>تعالى اقعد معانا.</h2>
+    <p style="color:var(--muted);max-width:40ch">12 شارع البرازيل، الزمالك، القاهرة. جنب الجنينة، والترابيزات اللي برا أحلى حاجة الصبح بدري.</p>
+    <a class="btn fill" href="#menu">اطلب أونلاين ←</a>
+  </div>
+  <div class="hours reveal" id="hours"></div>
+</div></section>
+
+<footer><div class="in"><span>© بُنّ وسُكّر. مشروع تصميم تجريبي.</span><span>محمّص بحب في القاهرة</span></div></footer>
+
+<script>
+const origins=["إثيوبيا · يرغاتشيفي","كولومبيا · هويلا","كينيا · نيري","البرازيل · سول دي مينَس","اليمن · حَراز","جواتيمالا · أنتيجوا"];
+const t=document.getElementById("track");
+const one=origins.map(o=>`<span><i>✦</i>${o}</span>`).join("");t.innerHTML=one+one;
+
+const menu={
+  "قهوة سخنة":[["إسبريسو","دبل شوت، بن اليوم",65],["فلات وايت","إسبريسو ولبن مخفوق ناعم",95],["كورتادو","نص بنص",85],["V60","حبوب مختصة، اسأل على المتاح",110],["تركي محوّج","بالحبهان، على الرملة",55],["موكا","شوكولاتة داكنة 70٪",105]],
+  "ساقع":[["آيس لاتيه","",100],["كولد برو","منقوع 18 ساعة",95],["إسبريسو تونيك","مع قشر برتقال",110],["آيس سبانيش لاتيه","لبن مكثف",115]],
+  "حلو":[["بسبوسة بالقشطة","",70],["كرواسون زبدة","طازة كل صبح",60],["تشيز كيك فستق","",125],["كوكيز شوكولاتة","سخنة",55]]
+};
+const tabs=document.getElementById("tabs"),list=document.getElementById("menuList");
+function show(k){
+  [...tabs.children].forEach(b=>b.setAttribute("aria-selected",b.textContent===k));
+  list.innerHTML=menu[k].map((m,i)=>`<div class="item" style="animation-delay:${i*60}ms"><div><h3>${m[0]}</h3>${m[1]?`<small>${m[1]}</small>`:""}</div><span class="dots"></span><span class="price">${m[2]} ج.م</span></div>`).join("");
+}
+Object.keys(menu).forEach(k=>{const b=document.createElement("button");b.className="tab";b.role="tab";b.textContent=k;b.onclick=()=>show(k);tabs.append(b)});
+show("قهوة سخنة");
+
+const days=["الأحد","الاتنين","التلات","الأربع","الخميس","الجمعة","السبت"];
+const hrs=d=>d===5?"10 ص – 1 بالليل":"7 ص – 12 بالليل";
+const today=new Date().getDay();
+document.getElementById("hours").innerHTML=[6,0,1,2,3,4,5].map(d=>`<div class="${d===today?"now":""}"><span>${days[d]}${d===today?" · النهارده":""}</span><span>${hrs(d)}</span></div>`).join("");
+</script>
+
+</body></html>
